@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://dv5001xl4xebi"]
+
+[ext_resource type="Script" uid="uid://b6livvcto2ucw" path="res://addons/zylann.hterrain/hterrain.gd" id="1_pkg7o"]
+[ext_resource type="Resource" path="res://dd/data.hterrain" id="2_gbfbk"]
+[ext_resource type="Script" uid="uid://dvfc7jtob5p7d" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_ioo17"]
+[ext_resource type="Texture2D" uid="uid://chahiywa1p6am" path="res://mterrain/slot0_albedo_bump.png" id="4_wse8f"]
+[ext_resource type="Texture2D" uid="uid://c2gbsyoclbd6k" path="res://mterrain/slot1_albedo_bump.png" id="5_ic0uy"]
+[ext_resource type="Texture2D" uid="uid://d28sng6gum88l" path="res://mterrain/slot0_normal_roughness.png" id="6_k3n1d"]
+[ext_resource type="Texture2D" uid="uid://1ba361u0dyb4" path="res://mterrain/slot1_normal_roughness.png" id="7_2o6r5"]
+
+[sub_resource type="Resource" id="Resource_70uel"]
+script = ExtResource("3_ioo17")
+mode = 0
+textures = [[ExtResource("4_wse8f"), ExtResource("5_ic0uy")], [ExtResource("6_k3n1d"), ExtResource("7_2o6r5")]]
+
+[node name="World" type="Node3D"]
+
+[node name="HTerrain" type="Node3D" parent="."]
+script = ExtResource("1_pkg7o")
+_terrain_data = ExtResource("2_gbfbk")
+chunk_size = 64
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_70uel")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
+metadata/_custom_type_script = "uid://b6livvcto2ucw"
