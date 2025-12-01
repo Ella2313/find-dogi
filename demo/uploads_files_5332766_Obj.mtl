@@ -1,0 +1,106 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl Roofing_Slate_Dark
+Ka 0.000000 0.000000 0.000000
+Kd 0.388235 0.411765 0.423529
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Roofing_Slate_Dark.jpg
+
+newmtl Cladding_Siding_Tan
+Ka 0.000000 0.000000 0.000000
+Kd 0.635294 0.494118 0.372549
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Cladding_Siding_Tan.jpg
+
+newmtl Color_H01
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl Cladding_Siding_White
+Ka 0.000000 0.000000 0.000000
+Kd 0.811765 0.811765 0.811765
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Cladding_Siding_White.jpg
+
+newmtl Color_G02
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 0.968627 0.819608
+Ks 0.330000 0.330000 0.330000
+
+newmtl Color_H08
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.400000 0.400000
+Ks 0.330000 0.330000 0.330000
+
+newmtl Wood_Floor_Dark
+Ka 0.000000 0.000000 0.000000
+Kd 0.600000 0.368627 0.164706
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Wood_Floor_Dark.jpg
+
+newmtl Wood_Board_Cork
+Ka 0.000000 0.000000 0.000000
+Kd 0.843137 0.788235 0.450980
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Wood_Board_Cork.jpg
+
+newmtl Wood_Floor_Light
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.690196 0.498039
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Wood_Floor_Light.jpg
+
+newmtl Translucent_Glass_Gray
+Ka 0.000000 0.000000 0.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.330000 0.330000 0.330000
+d 0.500000
+
+newmtl Color_M06
+Ka 0.000000 0.000000 0.000000
+Kd 0.337255 0.337255 0.337255
+Ks 0.330000 0.330000 0.330000
+
+newmtl Stone_Coursed_Rough
+Ka 0.000000 0.000000 0.000000
+Kd 0.647059 0.627451 0.509804
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Stone_Coursed_Rough.jpg
+
+newmtl Roofing_Metal_Standing_Seam_Red
+Ka 0.000000 0.000000 0.000000
+Kd 0.650980 0.274510 0.227451
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Roofing_Metal_Standing_Seam_Red.jpg
+
+newmtl Roofing_Shingles_Multi
+Ka 0.000000 0.000000 0.000000
+Kd 0.533333 0.498039 0.490196
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Roofing_Shingles_Multi.jpg
+
+newmtl _auto_
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl Mirror_01
+Ka 0.000000 0.000000 0.000000
+Kd 0.725490 0.725490 0.725490
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Mirror_01.jpg
+
+newmtl Roofing_Shingles_Wood
+Ka 0.000000 0.000000 0.000000
+Kd 0.615686 0.572549 0.431373
+Ks 0.330000 0.330000 0.330000
+map_Kd Obj/Roofing_Shingles_Wood.jpg
+

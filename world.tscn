@@ -1,19 +1,52 @@
-[gd_scene load_steps=9 format=3 uid="uid://dv5001xl4xebi"]
+[gd_scene load_steps=20 format=3 uid="uid://dv5001xl4xebi"]
 
 [ext_resource type="Script" uid="uid://b6livvcto2ucw" path="res://addons/zylann.hterrain/hterrain.gd" id="1_pkg7o"]
-[ext_resource type="Resource" path="res://dd/data.hterrain" id="2_gbfbk"]
+[ext_resource type="Resource" uid="uid://bsann8h1l67xi" path="res://dd/data.hterrain" id="2_gbfbk"]
 [ext_resource type="Script" uid="uid://dvfc7jtob5p7d" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_ioo17"]
-[ext_resource type="Texture2D" uid="uid://chahiywa1p6am" path="res://mterrain/slot0_albedo_bump.png" id="4_wse8f"]
-[ext_resource type="Texture2D" uid="uid://c2gbsyoclbd6k" path="res://mterrain/slot1_albedo_bump.png" id="5_ic0uy"]
-[ext_resource type="Texture2D" uid="uid://d28sng6gum88l" path="res://mterrain/slot0_normal_roughness.png" id="6_k3n1d"]
-[ext_resource type="Texture2D" uid="uid://1ba361u0dyb4" path="res://mterrain/slot1_normal_roughness.png" id="7_2o6r5"]
+[ext_resource type="Texture2D" uid="uid://ddprscrpsofah" path="res://demo/assets/textures/ground037_alb_ht.png" id="4_ic0uy"]
+[ext_resource type="Texture2D" uid="uid://d0kho7wu6ldqh" path="res://Texture/snow/Snow008A_1K-PNG_Color.png" id="5_k3n1d"]
+[ext_resource type="Texture2D" uid="uid://bhm2mo20dl51x" path="res://Texture/ground/Ground037_1K-PNG_Color.png" id="6_2o6r5"]
+[ext_resource type="Texture2D" uid="uid://crc4e4tk7iv5d" path="res://Texture/ground/Ground003_1K-PNG_Color.png" id="7_70uel"]
+[ext_resource type="Texture2D" uid="uid://c1ots7w6i0i1q" path="res://demo/assets/textures/ground037_nrm_rgh.png" id="8_hiqwa"]
+[ext_resource type="Texture2D" uid="uid://b2w611bo2q3oo" path="res://Texture/snow/Snow008A_1K-PNG_NormalDX.png" id="9_2u3nc"]
+[ext_resource type="Texture2D" uid="uid://cc0btn447w8wh" path="res://Texture/ground/Ground037_1K-PNG_NormalDX.png" id="10_udxuc"]
+[ext_resource type="Texture2D" uid="uid://dx4cy3nmcey5o" path="res://Texture/ground/Ground003_1K-PNG_NormalDX.png" id="11_ikiii"]
+[ext_resource type="PackedScene" uid="uid://tt8ace3pybub" path="res://House/House/House.fbx" id="12_k3n1d"]
+[ext_resource type="Script" uid="uid://b6pxblsdk8qnp" path="res://character_body_3d.gd" id="13_2o6r5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_70uel"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_hiqwa"]
+sky_material = SubResource("ProceduralSkyMaterial_70uel")
+
+[sub_resource type="Environment" id="Environment_2u3nc"]
+background_mode = 2
+sky = SubResource("Sky_hiqwa")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="Resource" id="Resource_70uel"]
 script = ExtResource("3_ioo17")
 mode = 0
-textures = [[ExtResource("4_wse8f"), ExtResource("5_ic0uy")], [ExtResource("6_k3n1d"), ExtResource("7_2o6r5")]]
+textures = [[ExtResource("4_ic0uy"), ExtResource("5_k3n1d"), ExtResource("6_2o6r5"), ExtResource("7_70uel")], [ExtResource("8_hiqwa"), ExtResource("9_2u3nc"), ExtResource("10_udxuc"), ExtResource("11_ikiii")]]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_udxuc"]
+lightmap_size_hint = Vector2i(17, 14)
+add_uv2 = true
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2o6r5"]
+points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
 
 [node name="World" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 858.7712, 5.3344536, 713.6641)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2u3nc")
 
 [node name="HTerrain" type="Node3D" parent="."]
 script = ExtResource("1_pkg7o")
@@ -33,3 +66,23 @@ shader_params/u_depth_blending = true
 shader_params/u_triplanar = null
 shader_params/u_tile_reduction = null
 metadata/_custom_type_script = "uid://b6livvcto2ucw"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="House" parent="." instance=ExtResource("12_k3n1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 955.8003, 0.46122742, 930.7664)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 855.8272, 0.98605335, 716.09924)
+script = ExtResource("13_2o6r5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("CapsuleMesh_udxuc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("ConvexPolygonShape3D_2o6r5")
+
+[node name="Head" type="Node3D" parent="CharacterBody3D"]
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577262, 0.054709077)
