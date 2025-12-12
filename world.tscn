@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dv5001xl4xebi"]
+[gd_scene load_steps=21 format=3 uid="uid://dv5001xl4xebi"]
 
 [ext_resource type="Script" uid="uid://b6livvcto2ucw" path="res://addons/zylann.hterrain/hterrain.gd" id="1_pkg7o"]
 [ext_resource type="Resource" uid="uid://bsann8h1l67xi" path="res://dd/data.hterrain" id="2_gbfbk"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://b2w611bo2q3oo" path="res://Texture/snow/Snow008A_1K-PNG_NormalDX.png" id="9_2u3nc"]
 [ext_resource type="Texture2D" uid="uid://cc0btn447w8wh" path="res://Texture/ground/Ground037_1K-PNG_NormalDX.png" id="10_udxuc"]
 [ext_resource type="Texture2D" uid="uid://dx4cy3nmcey5o" path="res://Texture/ground/Ground003_1K-PNG_NormalDX.png" id="11_ikiii"]
-[ext_resource type="PackedScene" uid="uid://tt8ace3pybub" path="res://House/House/House.fbx" id="12_k3n1d"]
 [ext_resource type="Script" uid="uid://b6pxblsdk8qnp" path="res://character_body_3d.gd" id="13_2o6r5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_70uel"]
@@ -32,12 +31,15 @@ script = ExtResource("3_ioo17")
 mode = 0
 textures = [[ExtResource("4_ic0uy"), ExtResource("5_k3n1d"), ExtResource("6_2o6r5"), ExtResource("7_70uel")], [ExtResource("8_hiqwa"), ExtResource("9_2u3nc"), ExtResource("10_udxuc"), ExtResource("11_ikiii")]]
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_k3n1d"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2o6r5"]
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_udxuc"]
 lightmap_size_hint = Vector2i(17, 14)
 add_uv2 = true
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2o6r5"]
-points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k3n1d"]
 
 [node name="World" type="Node3D"]
 
@@ -68,21 +70,38 @@ shader_params/u_tile_reduction = null
 metadata/_custom_type_script = "uid://b6livvcto2ucw"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.474213, 0, 0, 0, 0.27051926, 0, 0, 0, 8.694267, 925.95184, 0.06570625, 876.5572)
+mesh = SubResource("PlaneMesh_k3n1d")
 
-[node name="House" parent="." instance=ExtResource("12_k3n1d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 955.8003, 0.46122742, 930.7664)
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(16.833925, 0, 0, 0, 4.0485435e-08, -12.695638, 0, -0.9261989, -5.549439e-07, 925.99426, 6.2995567, 884.652)
+mesh = SubResource("BoxMesh_2o6r5")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(16.833927, 8.366199e-08, 0, -1.4716686e-06, 0.95698166, 0, 0, 0, -17.064495, 925.99426, 12.25182, 876.55634)
+mesh = SubResource("BoxMesh_2o6r5")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(16.833925, 0, 0, 0, 4.0485435e-08, -17.60025, 0, -0.9261989, -7.693313e-07, 925.99426, 3.3774633, 868.54065)
+mesh = SubResource("BoxMesh_2o6r5")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.4232736e-07, 0.77111506, -7.7727515e-07, 0, -3.370651e-08, -17.781982, -16.98247, -3.370651e-08, 3.3975772e-14, 934.0357, 3.5279036, 876.59283)
+mesh = SubResource("BoxMesh_2o6r5")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 855.8272, 0.98605335, 716.09924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 909.22046, 0.8706192, 876.31177)
 script = ExtResource("13_2o6r5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1.516606, 0, 0, 0, 2.0070739, 0, 0, 0, 1.7269052, 0, 0.7535199, 0)
 mesh = SubResource("CapsuleMesh_udxuc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-shape = SubResource("ConvexPolygonShape3D_2o6r5")
+transform = Transform3D(1.516606, 0, 0, 0, 2.0070739, 0, 0, 0, 1.7269052, 0, 0.7535199, 0)
+shape = SubResource("CapsuleShape3D_k3n1d")
 
 [node name="Head" type="Node3D" parent="CharacterBody3D"]
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577262, 0.054709077)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.057373, 1.5252067, 2.2374878)
