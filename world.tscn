@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dv5001xl4xebi"]
+[gd_scene load_steps=32 format=3 uid="uid://dv5001xl4xebi"]
 
 [ext_resource type="Script" uid="uid://b6livvcto2ucw" path="res://addons/zylann.hterrain/hterrain.gd" id="1_pkg7o"]
 [ext_resource type="Resource" uid="uid://bsann8h1l67xi" path="res://dd/data.hterrain" id="2_gbfbk"]
@@ -60,13 +60,18 @@ sky_material = SubResource("ProceduralSkyMaterial_70uel")
 background_mode = 2
 sky = SubResource("Sky_hiqwa")
 ambient_light_source = 2
-ambient_light_color = Color(0.23753911, 0.23753914, 0.23753911, 1)
+ambient_light_color = Color(0.24115604, 0.24115604, 0.24115601, 1)
 ambient_light_energy = 0.1
 tonemap_mode = 2
 glow_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_70uel"]
 size = Vector3(0.28125, 0.30065918, 0.12922096)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_70uel"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26xuy"]
 
 [node name="World" type="Node3D"]
 
@@ -175,28 +180,37 @@ shape = SubResource("BoxShape3D_70uel")
 [node name="uploads_files_3425003_53468_GlintPendantLight" parent="Node3D" instance=ExtResource("14_70uel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 933.5412, 3.4805217, 876.43414)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
+[node name="SpotLight3D" type="SpotLight3D" parent="Node3D"]
 transform = Transform3D(-0.9973095, 0.07323778, 0.0031589228, 0.0031504417, -0.00023132299, 0.99999505, 0.07323814, 0.9973145, -3.0720038e-08, 933.5443, 3.525913, 876.4353)
 light_energy = 16.0
 shadow_enabled = true
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+[node name="SpotLight3D2" type="SpotLight3D" parent="Node3D"]
 transform = Transform3D(-0.9973095, 0.07323778, 0.0031589228, 0.0031504417, -0.00023132299, 0.99999505, 0.07323814, 0.9973145, -3.0720038e-08, 933.5443, 3.525913, 876.4353)
 light_energy = 16.0
 shadow_enabled = true
+distance_fade_enabled = true
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+[node name="SpotLight3D3" type="SpotLight3D" parent="Node3D"]
 transform = Transform3D(-0.9973095, 0.07323778, 0.0031589228, 0.0031504417, -0.00023132299, 0.99999505, 0.07323814, 0.9973145, -3.0720038e-08, 933.5443, 4.3894267, 876.4353)
 light_energy = 16.0
 distance_fade_enabled = true
 spot_angle = 38.35605
 
-[node name="SpotLight3D4" type="SpotLight3D" parent="."]
-transform = Transform3D(0.9962383, -0.07315911, 0.046444193, 0.046319462, -0.003401517, -0.9989209, 0.07323815, 0.9973145, -3.0691734e-08, 933.5443, 0.7005501, 876.4353)
+[node name="SpotLight3D4" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(0.9962383, -0.07315911, 0.046444193, 0.046319462, -0.003401517, -0.9989209, 0.07323815, 0.9973145, -3.0691737e-08, 933.5443, 0.7005501, 876.4353)
 light_energy = 16.0
 distance_fade_enabled = true
 spot_angle = 26.345963
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.26948124, 0.7034705, -0.65765417, -0.5454813, 0.6743023, 0.4977613, 0.79361826, 0.2246008, 0.56544197, 928.6536, 3.1402817, 877.7896)
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Node3D"]
+transform = Transform3D(0.26948127, 0.7034706, -0.65765417, -0.5454814, 0.6743024, 0.49776143, 0.7936183, 0.22460073, 0.56544197, 928.6536, 3.1402817, 877.7896)
+light_color = Color(0.581033, 0.58103293, 0.5810329, 1)
 shadow_enabled = true
+
+[node name="grass" type="Node" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 844.96875, 2.0358582, 778.49286)
+mesh = SubResource("PlaneMesh_70uel")
+surface_material_override/0 = SubResource("StandardMaterial3D_26xuy")
