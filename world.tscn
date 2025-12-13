@@ -65,8 +65,8 @@ ambient_light_energy = 0.1
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2o6r5"]
-size = Vector3(0.18764496, 0.58367205, 0.10580996)
+[sub_resource type="BoxShape3D" id="BoxShape3D_70uel"]
+size = Vector3(0.28125, 0.30065918, 0.12922096)
 
 [node name="World" type="Node3D"]
 
@@ -165,8 +165,12 @@ transform = Transform3D(0.078118354, 0, -1.769745, 0, 1.4907635, 0, 1.6577271, 0
 [node name="StaticBody3D" type="StaticBody3D" parent="Node3D/chair"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/chair/StaticBody3D"]
-transform = Transform3D(0.9934283, 0, -1.8626451e-08, 0, 0.8882772, 0, -1.4901161e-08, 0, 1.1417485, 0.0053100586, -0.09272905, 0.046966553)
-shape = SubResource("BoxShape3D_2o6r5")
+transform = Transform3D(1, 0, -1.1175871e-08, 0, 0.9999999, 0, -1.8626451e-08, 0, 1, 0.0013427734, -0.030230697, 0.03805542)
+shape = SubResource("BoxShape3D_70uel")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/chair/StaticBody3D"]
+transform = Transform3D(1, 0, -1.1175871e-08, 0, 0.9999999, 0, -1.8626451e-08, 0, 1, -0.0014648438, 0.355805, -0.32278442)
+shape = SubResource("BoxShape3D_70uel")
 
 [node name="uploads_files_3425003_53468_GlintPendantLight" parent="Node3D" instance=ExtResource("14_70uel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 933.5412, 3.4805217, 876.43414)
@@ -184,14 +188,12 @@ shadow_enabled = true
 [node name="SpotLight3D3" type="SpotLight3D" parent="."]
 transform = Transform3D(-0.9973095, 0.07323778, 0.0031589228, 0.0031504417, -0.00023132299, 0.99999505, 0.07323814, 0.9973145, -3.0720038e-08, 933.5443, 4.3894267, 876.4353)
 light_energy = 16.0
-shadow_enabled = true
 distance_fade_enabled = true
 spot_angle = 38.35605
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="."]
 transform = Transform3D(0.9962383, -0.07315911, 0.046444193, 0.046319462, -0.003401517, -0.9989209, 0.07323815, 0.9973145, -3.0691734e-08, 933.5443, 0.7005501, 876.4353)
 light_energy = 16.0
-shadow_enabled = true
 distance_fade_enabled = true
 spot_angle = 26.345963
 
