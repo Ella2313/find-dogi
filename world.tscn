@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dv5001xl4xebi"]
+[gd_scene load_steps=33 format=3 uid="uid://dv5001xl4xebi"]
 
 [ext_resource type="Script" uid="uid://b6livvcto2ucw" path="res://addons/zylann.hterrain/hterrain.gd" id="1_pkg7o"]
 [ext_resource type="Resource" uid="uid://bsann8h1l67xi" path="res://dd/data.hterrain" id="2_gbfbk"]
@@ -11,9 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://b2w611bo2q3oo" path="res://Texture/snow/Snow008A_1K-PNG_NormalDX.png" id="9_2u3nc"]
 [ext_resource type="Texture2D" uid="uid://cc0btn447w8wh" path="res://Texture/ground/Ground037_1K-PNG_NormalDX.png" id="10_udxuc"]
 [ext_resource type="Texture2D" uid="uid://dx4cy3nmcey5o" path="res://Texture/ground/Ground003_1K-PNG_NormalDX.png" id="11_ikiii"]
+[ext_resource type="Script" uid="uid://b1hr6kkitj3ob" path="res://addons/zylann.hterrain/hterrain_detail_layer.gd" id="12_ikiii"]
 [ext_resource type="Script" uid="uid://b6pxblsdk8qnp" path="res://character_body_3d.gd" id="13_2o6r5"]
 [ext_resource type="PackedScene" uid="uid://b2b1wyb0nqsl6" path="res://Chair/chair.fbx" id="13_70uel"]
+[ext_resource type="Texture2D" uid="uid://bo0h6g67uqpmf" path="res://textures/Grass_green.png" id="13_ikiii"]
 [ext_resource type="PackedScene" uid="uid://dnfwie1soxxcd" path="res://uploads_files_3425003_53468_GlintPendantLight.FBX" id="14_70uel"]
+[ext_resource type="Texture2D" uid="uid://6jmdwj3vn6m0" path="res://addons/zylann.hterrain/tools/icons/icon_detail_layer_node.svg" id="15_bc84e"]
 
 [sub_resource type="Resource" id="Resource_70uel"]
 script = ExtResource("3_ioo17")
@@ -57,7 +60,7 @@ ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 sky_material = SubResource("ProceduralSkyMaterial_70uel")
 
 [sub_resource type="Environment" id="Environment_2u3nc"]
-background_mode = 2
+background_mode = 1
 sky = SubResource("Sky_hiqwa")
 ambient_light_source = 2
 ambient_light_color = Color(0.24115604, 0.24115604, 0.24115601, 1)
@@ -68,10 +71,6 @@ fog_light_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_70uel"]
 size = Vector3(0.28125, 0.30065918, 0.12922096)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_70uel"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26xuy"]
 
 [node name="World" type="Node3D"]
 
@@ -93,6 +92,16 @@ shader_params/u_depth_blending = true
 shader_params/u_triplanar = null
 shader_params/u_tile_reduction = null
 metadata/_custom_type_script = "uid://b6livvcto2ucw"
+
+[node name="HTerrainDetailLayer" type="Node3D" parent="HTerrain"]
+script = ExtResource("12_ikiii")
+texture = ExtResource("13_ikiii")
+shader_params/u_globalmap_tint_bottom = null
+shader_params/u_globalmap_tint_top = null
+shader_params/u_bottom_ao = null
+shader_params/u_instance_scale = null
+shader_params/u_roughness = null
+metadata/_editor_icon = ExtResource("15_bc84e")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.07628395, 0, -0.99708617, 0, 1, 0, 0.99708617, 0, -0.07628395, 922.3259, 1.0725203, 876.48334)
@@ -205,12 +214,7 @@ spot_angle = 26.345963
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Node3D"]
 transform = Transform3D(0.26948127, 0.7034706, -0.65765417, -0.5454814, 0.6743024, 0.49776143, 0.7936183, 0.22460073, 0.56544197, 928.6536, 3.1402817, 877.7896)
-light_color = Color(0.581033, 0.58103293, 0.5810329, 1)
+light_color = Color(0.19434938, 0.1943492, 0.19434935, 1)
 shadow_enabled = true
 
 [node name="grass" type="Node" parent="."]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="grass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 844.96875, 2.0358582, 778.49286)
-mesh = SubResource("PlaneMesh_70uel")
-surface_material_override/0 = SubResource("StandardMaterial3D_26xuy")
