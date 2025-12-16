@@ -1663,3 +1663,11 @@ class HT_SetCastShadowSettingAction:
 		setting = s
 	func exec(chunk):
 		chunk.set_cast_shadow_setting(setting)
+
+
+func _on_door_body_shape_entered(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
+	pass # Replace with function body.
+
+
+func _on_door_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.

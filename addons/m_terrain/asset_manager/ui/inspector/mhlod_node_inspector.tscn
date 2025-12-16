@@ -1,13 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://cl7pw54mmpvlb"]
-
-[ext_resource type="Script" uid="uid://ddyxq6oxgdr7u" path="res://addons/m_terrain/asset_manager/ui/inspector/mhlod_node_inspector.gd" id="1_nlfb7"]
-
-[node name="_VBoxContainer_26448" type="VBoxContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = -8.0
-offset_bottom = -8.0
-script = ExtResource("1_nlfb7")
+version https://git-lfs.github.com/spec/v1
+oid sha256:92f7350635d6082ffe2bb284370bbf1b81a2bd47068d9f2b0c13eb71b3b4b40c
+size 433

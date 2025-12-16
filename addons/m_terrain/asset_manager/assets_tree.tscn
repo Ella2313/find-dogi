@@ -1,13 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5o4frfy8r423"]
-
-[ext_resource type="Script" uid="uid://xheye4c45cw5" path="res://addons/m_terrain/asset_manager/assets_placer_grid.gd" id="1_lybir"]
-
-[node name="assets_tree" type="Tree"]
-size_flags_vertical = 3
-columns = 4
-allow_reselect = true
-allow_rmb_select = true
-allow_search = false
-hide_root = true
-select_mode = 2
-script = ExtResource("1_lybir")
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ab5b245e55fb9f0d847936ea9ef03eaa103de74947f463a585b967163d76be5
+size 400

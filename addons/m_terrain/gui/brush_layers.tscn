@@ -1,11 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://bacapwqdybi81"]
-
-[ext_resource type="Script" uid="uid://dr04rwb0tovg8" path="res://addons/m_terrain/gui/brush_layers.gd" id="1_3au4w"]
-
-[node name="brush_layers" type="ItemList"]
-custom_minimum_size = Vector2(300, 250)
-anchors_preset = 10
-anchor_right = 1.0
-grow_horizontal = 2
-max_columns = 4
-script = ExtResource("1_3au4w")
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2e519560f0eef27f50ee2161333222a69a4eb0f5e946bc3ca99c561b403f4a6
+size 369
