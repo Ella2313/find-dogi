@@ -3,8 +3,6 @@ extends CharacterBody3D
 @onready var camera_mount = $"camera mount"
 @onready var animation_player: AnimationPlayer = $varables/AuxScene/AnimationPlayer
 @onready var varables: Node3D = $varables
-@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
-
 
 var SPEED = 2.0
 const JUMP_VELOCITY = 4.5
@@ -44,7 +42,6 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		audio_stream_player_3d.play()
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
