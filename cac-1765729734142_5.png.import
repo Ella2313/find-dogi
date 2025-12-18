@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0wvyrl677vsw"
-path.s3tc="res://.godot/imported/cac-1765729734142_3.png-bad23c5530092f6fc5da33a7ec883561.s3tc.ctex"
+uid="uid://vnsskgkvwh3m"
+path.s3tc="res://.godot/imported/cac-1765729734142_5.png-4aa4db00ff9f779996e9fe1cf237d58c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "9d03dbc6cb86d3820650571b5a215683"
+"md5": "1a243c82cb1276b5539c83315fbec45f"
 }
 
 [deps]
 
-source_file="res://player/cac-1765729734142_3.png"
-dest_files=["res://.godot/imported/cac-1765729734142_3.png-bad23c5530092f6fc5da33a7ec883561.s3tc.ctex"]
+source_file="res://cac-1765729734142_5.png"
+dest_files=["res://.godot/imported/cac-1765729734142_5.png-4aa4db00ff9f779996e9fe1cf237d58c.s3tc.ctex"]
 
 [params]
 
@@ -30,7 +30,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://cac-1765729734142_3.png"
+roughness/src_normal="res://cac-1765729734142_5.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
