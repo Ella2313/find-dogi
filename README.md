@@ -3,20 +3,8 @@ Hii! My name is Gabriella I'm a 15 year old girl from Kenya! I'm an SDG Champion
 My Project is a game called Find Your Dog, this game is about a man, his dog, and a voice telling his hit long lost self reminding him of his dog "Oscer" how they had golden moments till sadness approached them ..... Ever since that faithful day life became nothing to him..:<
 I love animals and there sweet pasonalitys there golden hearts so i want to make a diffrence in this world that animals are apart of us and we should care for them in every way.
 
-
-
-
-
- ♡   ႔ ႔     
-    ᠸ^ ^ ⸝⸝      
-      |、˜〵
-     じしˍ,)⁐̤ᐷ
-
-
-
-
-
-
+૮( ˃ ꒳ ˂)ა
+◟/づ🦴
 
  
 but i did ittt!!!
