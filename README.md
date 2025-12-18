@@ -7,9 +7,9 @@ I love animals and there sweet pasonalitys there golden hearts so i want to make
 
 
 
-♡   ႔ ႔     
-   ᠸ^ ^ ⸝⸝      
-     |、˜〵
+ ♡   ႔ ႔     
+    ᠸ^ ^ ⸝⸝      
+      |、˜〵
      じしˍ,)⁐̤ᐷ
 
 
